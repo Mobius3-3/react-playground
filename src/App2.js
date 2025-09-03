@@ -4,6 +4,7 @@ import {getHours} from 'date-fns';
 import PrimeCalculator from './PrimeCalculator';
 import Clock from './Clock';
 import Box from './Box';
+import MegaBoost from './MegaBoost';
 
 function App2() {
     const time = useTime();
@@ -21,6 +22,14 @@ function App2() {
             { flex: 1, background: 'hsl(50deg 100% 60%)'},
         ];
     }, [boxWidth]);
+
+    const [count, setCount] = React.useState(0);
+
+    const handleMegaBoost = React.useCallback(function handleMegaBoost() {
+        setCount(
+            (currentCount) => currentCount + 1000
+        );
+    }, []);
 
     return (
         <div>
@@ -66,6 +75,21 @@ function App2() {
                     </div>
                 </section>
             </div>
+            <h2>Example MegaBoost</h2>
+            <div>
+                Count: {count}
+                <button
+                    onClick={
+                        () => setCount(
+                                (currentCount) => currentCount + 1
+                            )
+                    }>
+                    Click me!
+                </button>
+                <MegaBoost
+                    handleClick={handleMegaBoost}
+                />
+            </div>
         </div>
     );
 }
@@ -98,7 +122,5 @@ function useTime() {
 
     return time;
 }
-
-
 
 export default App2;
