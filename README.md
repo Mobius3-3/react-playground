@@ -76,5 +76,6 @@ npm start
 
 ## References
 
-- Why React re-renders — https://www.joshwcomeau.com/react/why-react-re-renders/
-- useMemo & useCallback guide — https://www.joshwcomeau.com/react/usememo-and
+- [Why React re-renders](https://www.joshwcomeau.com/react/why-react-re-renders/)
+- [useMemo & useCallback guide](https://www.joshwcomeau.com/react/usememo-and)
+- [Before You memo()](https://overreacted.io/before-you-memo/)
